@@ -63,6 +63,8 @@ namespace ConsoleApplication3
             // Create and start workers
             Worker[] work = new Worker[numThreads];
             Thread[] threads = new Thread[numThreads];
+
+            // create and start threads
             for (long i = 0; i < numThreads; i++)
             {
                 work[i] = new Worker(this);
@@ -71,6 +73,7 @@ namespace ConsoleApplication3
                 thread.Start();
             }
 
+            // wait for threads to finish
             foreach (var thread in threads)
             {
                 thread.Join();

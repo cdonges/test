@@ -21,6 +21,7 @@ namespace ConsoleApplication2
 
                 List<Thread> threads = new List<Thread>();
 
+                // set up threads
                 for (int i = 0; i <= numberOfCars; i++)
                 {
                     Car car = new Car(i, synchronizedRandomGenerator, 1000);
